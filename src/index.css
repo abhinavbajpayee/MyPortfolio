@@ -1,13 +1,67 @@
-body {
+/* Basic Reset */
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Define your color palette */
+  --primary-color: #007bff; /* A nice blue */
+  --secondary-color: #6c757d; /* Grey */
+  --accent-color: #28a745; /* Green for highlights */
+  --background-color: #f8f9fa; /* Light background */
+  --text-color: #343a40; /* Dark grey for text */
+  --light-text-color: #e9ecef; /* For dark backgrounds */
+  --card-background: #ffffff; /* White for cards */
+  --border-color: #dee2e6; /* Light border */
+
+  /* Define your fonts */
+  --font-heading: 'Montserrat', sans-serif;
+  --font-body: 'Open Sans', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--background-color);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+a {
+  text-decoration: none;
+  color: var(--primary-color);
 }
+
+a:hover {
+  color: var(--accent-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--text-color);
+  margin-bottom: 0.5em;
+}
+
+section {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 40px 15px;
+  }
+}
+
+/* Add Google Fonts Import - you'll add these in your public/index.html or as @import here */
+/* For example, in public/index.html:
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+*/

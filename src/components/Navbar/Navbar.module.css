@@ -1,0 +1,122 @@
+.navbar {
+  background-color: var(--primary-color);
+  color: var(--light-text-color);
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: var(--font-heading);
+  font-size: 1.8em;
+  font-weight: 700;
+  color: var(--light-text-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.logo:hover {
+  color: var(--accent-color);
+}
+
+.navLinks {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navLinks li {
+  margin-left: 30px;
+}
+
+.navLinks a {
+  color: var(--light-text-color);
+  text-decoration: none;
+  font-size: 1.05em;
+  font-weight: 500;
+  padding: 5px 0;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.navLinks a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--accent-color);
+  transition: width 0.3s ease;
+}
+
+.navLinks a:hover::after,
+.navLinks a.activeLink::after {
+  width: 100%;
+}
+
+.navLinks a:hover,
+.navLinks a.activeLink {
+  color: var(--accent-color);
+}
+
+.hamburger {
+  display: none; /* Hidden on desktop */
+  background: none;
+  border: none;
+  font-size: 2em;
+  color: var(--light-text-color);
+  cursor: pointer;
+  z-index: 1001; /* Ensure it's above other content */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block; /* Show hamburger on smaller screens */
+  }
+
+  .navLinks {
+    flex-direction: column;
+    position: absolute;
+    top: 100%; /* Position below the navbar */
+    left: 0;
+    width: 100%;
+    background-color: var(--primary-color);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-100%); /* Start hidden above */
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 0.4s ease-out, opacity 0.4s ease-out, visibility 0.4s ease-out;
+    padding: 20px 0;
+    align-items: center; /* Center links in column */
+  }
+
+  .navLinks.active {
+    transform: translateY(0); /* Slide down when active */
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .navLinks li {
+    margin: 10px 0;
+  }
+
+  .navLinks a {
+    font-size: 1.15em;
+    padding: 8px 0;
+  }
+}

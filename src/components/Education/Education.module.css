@@ -1,0 +1,84 @@
+.educationSection {
+  background-color: var(--card-background);
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.sectionTitle {
+  font-size: 2.8em;
+  margin-bottom: 50px;
+  color: var(--primary-color);
+}
+
+.contentWrapper {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  max-width: 1000px;
+  margin: 0 auto;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.educationColumn, .certificationsColumn {
+  flex: 1;
+  min-width: 300px;
+  text-align: left;
+}
+
+.subTitle {
+  font-size: 2em;
+  color: var(--text-color);
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.educationCard, .certificationCard {
+  background-color: var(--background-color);
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  margin-bottom: 25px;
+  border: 1px solid var(--border-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.educationCard:hover, .certificationCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.cardTitle {
+  font-size: 1.5em;
+  color: var(--primary-color);
+  margin-bottom: 8px;
+}
+
+.cardInstitution, .cardIssuer {
+  font-size: 1.1em;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 5px;
+}
+
+.cardDetail {
+  font-size: 0.95em;
+  color: var(--secondary-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .sectionTitle {
+    font-size: 2.2em;
+  }
+  .contentWrapper {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .educationColumn, .certificationsColumn {
+    min-width: unset;
+    width: 100%;
+  }
+  .subTitle {
+    margin-top: 20px; /* Add some space between sections on mobile */
+  }
+}

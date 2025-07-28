@@ -1,0 +1,36 @@
+.projectsSection {
+  background-color: var(--background-color);
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.sectionTitle {
+  font-size: 2.8em;
+  margin-bottom: 50px;
+  color: var(--primary-color);
+}
+
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.callToAction {
+  margin-top: 60px;
+  font-size: 1.1em;
+  color: var(--text-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .sectionTitle {
+    font-size: 2.2em;
+  }
+  .projectsGrid {
+    grid-template-columns: 1fr; /* Stack cards vertically on smaller screens */
+    gap: 25px;
+  }
+}

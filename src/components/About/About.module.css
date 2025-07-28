@@ -1,0 +1,92 @@
+.aboutSection {
+  background-color: var(--card-background);
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.sectionTitle {
+  font-size: 2.8em;
+  margin-bottom: 50px;
+  color: var(--primary-color);
+}
+
+.aboutContent {
+  display: flex;
+  flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+  gap: 40px;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.aboutText {
+  flex: 2; /* Takes more space */
+  min-width: 300px; /* Minimum width before wrapping */
+}
+
+.aboutText p {
+  font-size: 1.15em;
+  line-height: 1.8;
+  margin-bottom: 1.5em;
+  color: var(--text-color);
+}
+
+.aboutHighlights {
+  flex: 1; /* Takes less space */
+  min-width: 250px; /* Minimum width before wrapping */
+  background-color: var(--background-color);
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--border-color);
+}
+
+.aboutHighlights h3 {
+  font-size: 1.6em;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.aboutHighlights ul {
+  list-style: none; /* Remove default bullet points */
+  padding: 0;
+}
+
+.aboutHighlights li {
+  font-size: 1.1em;
+  color: var(--text-color);
+  margin-bottom: 12px;
+  position: relative;
+  padding-left: 25px; /* Space for custom bullet */
+}
+
+.aboutHighlights li::before {
+  content: '👉'; /* Custom bullet point */
+  position: absolute;
+  left: 0;
+  color: var(--accent-color);
+  font-size: 0.9em;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .aboutContent {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+  .aboutText, .aboutHighlights {
+    min-width: unset; /* Remove min-width on small screens */
+    width: 100%; /* Take full width */
+  }
+  .aboutHighlights h3 {
+    text-align: center;
+  }
+  .aboutHighlights ul {
+    text-align: left; /* Align list items to left */
+    padding-left: 20px; /* Adjust padding */
+  }
+}

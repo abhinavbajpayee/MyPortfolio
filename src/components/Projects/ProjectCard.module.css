@@ -1,0 +1,126 @@
+.projectCard {
+  background-color: var(--card-background);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+}
+
+.projectCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.projectImage {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.projectContent {
+  padding: 25px;
+  flex-grow: 1; /* Allows content to expand and push links to bottom */
+  display: flex;
+  flex-direction: column;
+}
+
+.projectTitle {
+  font-size: 1.8em;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.projectDescription {
+  font-size: 1.05em;
+  color: var(--text-color);
+  line-height: 1.6;
+  margin-bottom: 15px;
+  flex-grow: 1; /* Make description take available space */
+}
+
+.projectTech {
+  margin-top: 10px;
+  margin-bottom: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.techTag {
+  background-color: var(--background-color);
+  color: var(--secondary-color);
+  padding: 6px 12px;
+  border-radius: 5px;
+  font-size: 0.85em;
+  font-weight: 500;
+  border: 1px solid var(--border-color);
+}
+
+.projectLinks {
+  margin-top: 20px; /* Push links to bottom */
+  display: flex;
+  justify-content: flex-start;
+  gap: 15px;
+}
+
+.btnLive, .btnGithub {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-size: 0.95em;
+  text-align: center;
+}
+
+.btnLive {
+  background-color: var(--accent-color);
+  color: #fff;
+  border: 1px solid var(--accent-color);
+}
+
+.btnLive:hover {
+  background-color: #218838; /* Darker green */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btnGithub {
+  background-color: var(--secondary-color);
+  color: #fff;
+  border: 1px solid var(--secondary-color);
+}
+
+.btnGithub:hover {
+  background-color: #5a6268; /* Darker grey */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .projectContent {
+    padding: 20px;
+  }
+  .projectTitle {
+    font-size: 1.5em;
+  }
+  .projectDescription {
+    font-size: 1em;
+  }
+  .techTag {
+    font-size: 0.8em;
+    padding: 5px 10px;
+  }
+  .projectLinks {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .btnLive, .btnGithub {
+    width: 100%;
+  }
+}
