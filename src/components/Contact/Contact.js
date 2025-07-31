@@ -18,10 +18,10 @@ const Contact = () => {
           </p>
           <div className={styles.socialLinks}>
             <a href="https://www.linkedin.com/in/abhinav-bajpai-58b36128b/" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}>
-              <img src="/linkedin-icon.svg" alt="LinkedIn" /> {/* Add SVG icons to public folder */}
+              <img src="/linkedin.png" alt="LinkedIn" /> {/* Add SVG icons to public folder */}
             </a>
             <a href="https://medium.com/@abhinavbajpayee88" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}>
-              <img src="/medium-icon.svg" alt="Medium" /> {/* Add SVG icons to public folder */}
+              <img src="/medium.png" alt="Medium" /> {/* Add SVG icons to public folder */}
             </a>
             {/* Add GitHub icon if you have a public repo and an icon for it */}
             {/* <a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}>

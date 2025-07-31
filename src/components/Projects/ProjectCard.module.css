@@ -93,6 +93,7 @@
   background-color: var(--secondary-color);
   color: #fff;
   border: 1px solid var(--secondary-color);
+  margin: 30px auto 0 auto;
 }
 
 .btnGithub:hover {
@@ -122,5 +123,6 @@
   }
   .btnLive, .btnGithub {
     width: 100%;
+     margin: 30px auto 0 auto;
   }
 }

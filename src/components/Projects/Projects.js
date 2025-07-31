@@ -10,14 +10,14 @@ const Projects = () => {
       technologies: ["React.js","Java Script","CSS"],
       // liveLink: "https://github.com/ACM-JUIT/Team-10-Student-Portfolio-Platform-.git", // Replace with actual link
       githubLink: "https://github.com/ACM-JUIT/Team-10-Student-Portfolio-Platform-.git", // WordPress sites usually don't have public GitHub repos for the core site
-      image: "/project-wordpress.jpg" // Add an image in public folder
+      image: "Studentportfolio.png" // Add an image in public folder
     },
     {
       title: "My Portfolio",
       description: "Contributed to a team-based web application focused on [describe project purpose]. My role involved [your specific contributions, e.g., front-end development, API integration, UI design].",
       technologies: ["React", "Java Scrip", "CSS"],
       githubLink: "https://github.com/abhinavbajpayee/MyPortfolio", // Replace with actual link
-      image: "/project-collaborative.jpg" // Add an image in public folder
+      image: "myportfolio.png" // Add an image in public folder
     },
     // Add more projects as needed
     // Example UI/UX Design Project:
@@ -27,7 +27,7 @@ const Projects = () => {
       technologies: ["Figma", "Adobe XD", "React", "CSS"],
       // liveLink: "https://www.behance.net/your-uiux-project", // Link to Behance, Dribbble, or a PDF
       githubLink: "https://github.com/abhinavbajpayee/E-commerece-final",
-      image: "/project-uiux.jpg" // Add an image in public folder
+      image: "web2.png" // Add an image in public folder
     }
   ];
 

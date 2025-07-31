@@ -14,10 +14,10 @@ const Footer = () => {
         </div>
         <div className={styles.footerSocial}>
           <a href="https://www.linkedin.com/in/abhinav-bajpai-58b36128b/" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}>
-            <img src="/linkedin-icon.svg" alt="LinkedIn" />
+            <img src="/linkedin.png" alt="LinkedIn" />
           </a>
           <a href="https://medium.com/@abhinavbajpayee88" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}>
-            <img src="/medium-icon.svg" alt="Medium" />
+            <img src="/medium.png" alt="Medium" />
           </a>
           {/* Add GitHub if applicable */}
           {/* <a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}>
