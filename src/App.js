@@ -1,4 +1,3 @@
-// src/App.js
 import React from 'react';
 import './App.css';
 
@@ -11,6 +10,7 @@ import Projects from './components/Projects/Projects';
 import Education from './components/Education/Education';
 import Extracurriculars from './components/Extracurriculars/Extracurriculars';
 import Contact from './components/Contact/Contact';
+import Chatbot from './components/Chatbot/Chatbot'; 
 import Footer from './components/Footer/Footer';
 
 
@@ -39,6 +39,10 @@ function App() {
         </section>
         <section id="extracurriculars">
           <Extracurriculars />
+        </section>
+        <section id="chatbot"> {/* New section for the chatbot */}
+          <h2 style={{ textAlign: 'center', fontSize: '2.8em', marginBottom: '50px', color: 'var(--primary-color)' }}>Ask Abhinav's Bot!</h2>
+          <Chatbot />
         </section>
         <section id="contact">
           <Contact />
