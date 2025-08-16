@@ -6,7 +6,7 @@ const Chatbot = () => {
   const [input, setInput] = useState('');
   const messagesEndRef = useRef(null);
 
-  // Define your questions and answers
+// Define your questions and answers
   // Keywords will be used to match user input
   const qaPairs = [
     {
