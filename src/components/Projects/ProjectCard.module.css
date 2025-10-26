@@ -1,128 +1,179 @@
 .projectCard {
-  background-color: var(--card-background);
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 1px solid var(--border-color);
-  display: flex;
-  flex-direction: column;
+    /* CRITICAL: Ensure the card fills the entire height of its slider slot */
+    height: 100%; 
+    
+    background-color: var(--card-background);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
 }
 
 .projectCard:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
 .projectImage {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  border-bottom: 1px solid var(--border-color);
+    width: 100%;
+    height: 220px; /* FIXED HEIGHT FOR IMAGE */
+    object-fit: cover;
+    border-bottom: 1px solid var(--border-color);
 }
 
 .projectContent {
-  padding: 25px;
-  flex-grow: 1; /* Allows content to expand and push links to bottom */
-  display: flex;
-  flex-direction: column;
-}
-
-.projectTitle {
-  font-size: 1.8em;
-  color: var(--primary-color);
-  margin-bottom: 10px;
+    padding: 25px;
+    /* CRITICAL: Allows content to expand and push links to bottom */
+    flex-grow: 1; 
+    display: flex;
+    flex-direction: column;
 }
 
 .projectDescription {
-  font-size: 1.05em;
-  color: var(--text-color);
-  line-height: 1.6;
-  margin-bottom: 15px;
-  flex-grow: 1; /* Make description take available space */
+    /* CRITICAL: Make description take all available space */
+    flex-grow: 1; 
+    font-size: 1.05em;
+    color: var(--text-color);
+    line-height: 1.6;
+    margin-bottom: 15px;
 }
 
+/* ... (Keep other styles like .projectTitle, .projectTech, .projectLinks, etc., the same) ... */
 .projectTech {
-  margin-top: 10px;
-  margin-bottom: 15px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
 }
 
 .techTag {
-  background-color: var(--background-color);
-  color: var(--secondary-color);
-  padding: 6px 12px;
-  border-radius: 5px;
-  font-size: 0.85em;
-  font-weight: 500;
-  border: 1px solid var(--border-color);
+    background-color: var(--background-color);
+    color: var(--secondary-color);
+    padding: 6px 12px;
+    border-radius: 5px;
+    font-size: 0.85em;
+    font-weight: 500;
+    border: 1px solid var(--border-color);
 }
 
 .projectLinks {
-  margin-top: 20px; /* Push links to bottom */
-  display: flex;
-  justify-content: flex-start;
-  gap: 15px;
+    margin-top: auto; /* Pushes links to the very bottom */
+    padding-top: 20px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px;
 }
 
 .btnLive, .btnGithub {
-  display: inline-block;
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  font-size: 0.95em;
-  text-align: center;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    font-size: 0.95em;
+    text-align: center;
+    text-decoration: none; /* Ensure links look like buttons */
 }
 
+/* Primary Button Style */
 .btnLive {
-  background-color: var(--accent-color);
-  color: #fff;
-  border: 1px solid var(--accent-color);
+    background-color: var(--accent-color);
+    color: #fff;
+    border: 1px solid var(--accent-color);
 }
 
 .btnLive:hover {
-  background-color: #218838; /* Darker green */
-  transform: translateY(-2px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: #218838; /* Darker green - Replace with your accent hover color */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Secondary Button Style */
 .btnGithub {
-  background-color: var(--secondary-color);
-  color: #fff;
-  border: 1px solid var(--secondary-color);
-  margin: 30px auto 0 auto;
+    background-color: var(--secondary-color);
+    color: #fff;
+    border: 1px solid var(--secondary-color);
+    /* Removed the previous auto margins which were inconsistent */
 }
 
 .btnGithub:hover {
-  background-color: #5a6268; /* Darker grey */
-  transform: translateY(-2px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: #5a6268; /* Darker grey - Replace with your secondary hover color */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Responsive adjustments */
 @media (max-width: 480px) {
-  .projectContent {
-    padding: 20px;
-  }
-  .projectTitle {
-    font-size: 1.5em;
-  }
-  .projectDescription {
-    font-size: 1em;
-  }
-  .techTag {
-    font-size: 0.8em;
-    padding: 5px 10px;
-  }
-  .projectLinks {
-    flex-direction: column;
-    gap: 10px;
-  }
-  .btnLive, .btnGithub {
-    width: 100%;
-     margin: 30px auto 0 auto;
-  }
+    .projectContent {
+        padding: 20px;
+    }
+    .projectTitle {
+        font-size: 1.5em;
+    }
+    .projectDescription {
+        font-size: 1em;
+    }
+    .techTag {
+        font-size: 0.8em;
+        padding: 5px 10px;
+    }
+    /* --- Add this code to Projects.module.css --- */
+
+/* Basic positioning and size for arrows */
+.carouselContainer :global(.slick-prev),
+.carouselContainer :global(.slick-next) {
+    z-index: 10; /* Ensures arrows are above the project cards */
+    width: 40px;
+    height: 40px;
+    
+    /* Center the arrows vertically */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Color and size of the arrow icon */
+.carouselContainer :global(.slick-prev:before),
+.carouselContainer :global(.slick-next:before) {
+    font-size: 40px;
+    color: var(--primary-color, #007bff); /* Use your primary color, with a fallback */
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+/* Ensure arrows are positioned at the very edge of the carousel */
+.carouselContainer :global(.slick-prev) {
+    left: -40px; /* Adjust this value if the arrow is too close to the edge */
+}
+
+.carouselContainer :global(.slick-next) {
+    right: -40px; /* Adjust this value if the arrow is too close to the edge */
+}
+
+/* Hover effect */
+.carouselContainer :global(.slick-prev:hover:before),
+.carouselContainer :global(.slick-next:hover:before) {
+    opacity: 1;
+}
+.carouselContainer {
+    width: 90%; /* This width must leave room for the arrows outside */
+    margin: 0 auto 50px auto; 
+}
+/* Optional: Hide arrows when only one item is present (better UX) */
+.carouselContainer :global(.slick-disabled) {
+    opacity: 0 !important;
+    pointer-events: none;
+}
+    .projectLinks {
+        flex-direction: column;
+        gap: 10px;
+        padding-top: 15px; /* Adjust padding for mobile */
+    }
+    .btnLive, .btnGithub {
+        width: 100%;
+        /* Removed unnecessary margin */
+    }
 }

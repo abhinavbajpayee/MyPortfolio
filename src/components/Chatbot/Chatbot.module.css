@@ -11,7 +11,28 @@
   overflow: hidden; /* Hide scrollbar in container */
   border: 1px solid var(--border-color);
 }
+/* --- Add this new style to Chatbot.module.css --- */
 
+.goHomeButton {
+    /* Styles to make it look like a clear button */
+    width: 90%; /* Make it nearly full width inside the container */
+    margin: 10px auto 10px auto; /* Center it with some padding */
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    
+    /* Use your primary color for visibility */
+    background-color: var(--primary-color); 
+    color: white;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.goHomeButton:hover {
+    background-color: var(--secondary-color); /* Use a darker shade or secondary color on hover */
+}
 .messagesContainer {
   flex-grow: 1;
   padding: 20px;

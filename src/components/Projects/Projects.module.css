@@ -1,36 +1,105 @@
 .projectsSection {
-  background-color: var(--background-color);
-  padding: 80px 20px;
-  text-align: center;
+    background-color: var(--background-color);
+    padding: 80px 20px;
+    text-align: center;
 }
 
 .sectionTitle {
-  font-size: 2.8em;
-  margin-bottom: 50px;
-  color: var(--primary-color);
+    font-size: 2.8em;
+    margin-bottom: 50px;
+    color: var(--primary-color);
 }
 
-.projectsGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 30px;
-  max-width: 1200px;
-  margin: 0 auto;
+/* ⚠️ IMPORTANT: Removing .projectsGrid styles as we are using a carousel */
+
+/* --- Category Selector Styles --- */
+
+.categorySelector {
+    display: flex;
+    justify-content: center; /* Center the buttons */
+    gap: 15px; /* Space between buttons */
+    margin-bottom: 30px; /* Space below the selector before the carousel */
+    padding: 10px;
 }
+
+.categoryButton {
+    padding: 10px 20px;
+    border: 2px solid var(--border-color); 
+    background-color: transparent;
+    color: var(--text-color); 
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+}
+
+.categoryButton:hover {
+    background-color: var(--secondary-color-light); /* Subtle hover effect */
+}
+
+/* CRUCIAL: Style for the active/selected button */
+.active {
+    background-color: var(--primary-color); 
+    border-color: var(--primary-color);
+    color: #FFFFFF; /* Ensures text is white when active for contrast */
+    font-weight: 700;
+}
+
+/* --- Carousel Specific Styles --- */
+
+.carouselContainer {
+    width: 90%; /* Defines the width of the whole carousel area */
+    margin: 0 auto 50px auto; /* Centers it and adds bottom space */
+}
+
+/* This padding creates the necessary space between the cards within the carousel */
+.slidePadding {
+    padding: 0 15px; 
+    /* Ensures ProjectCard takes up the full height of the slide */
+    display: flex; 
+}
+.slidePadding > div {
+    height: 100%;
+    width: 100%; /* Ensures the card component stretches */
+}
+
+/* Optional: Custom styling for slider dots/arrows (if using react-slick) */
+
+.carouselContainer :global(.slick-prev),
+.carouselContainer :global(.slick-next) {
+    z-index: 10; 
+    width: 40px;
+    height: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carouselContainer :global(.slick-prev:before),
+.carouselContainer :global(.slick-next:before) {
+    font-size: 40px;
+    color: var(--primary-color); 
+}
+
+.carouselContainer :global(.slick-prev) {
+    left: -40px; 
+}
+
+.carouselContainer :global(.slick-next) {
+    right: -40px; 
+}
+
 
 .callToAction {
-  margin-top: 60px;
-  font-size: 1.1em;
-  color: var(--text-color);
+    margin-top: 60px;
+    font-size: 1.1em;
+    color: var(--text-color);
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  .sectionTitle {
-    font-size: 2.2em;
-  }
-  .projectsGrid {
-    grid-template-columns: 1fr; /* Stack cards vertically on smaller screens */
-    gap: 25px;
-  }
+    .sectionTitle {
+        font-size: 2.2em;
+    }
+    /* No need for projectsGrid adjustments anymore */
 }

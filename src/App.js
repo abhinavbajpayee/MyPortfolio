@@ -12,7 +12,10 @@ import Extracurriculars from './components/Extracurriculars/Extracurriculars';
 import Contact from './components/Contact/Contact';
 import Chatbot from './components/Chatbot/Chatbot'; 
 import Footer from './components/Footer/Footer';
+// In src/index.js or src/App.js
 
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 function App() {
   return (
@@ -40,10 +43,13 @@ function App() {
         <section id="extracurriculars">
           <Extracurriculars />
         </section>
-        <section id="chatbot"> {/* New section for the chatbot */}
+        
+        {/* RENAMED ID: Changed from 'chatbot' to 'bot-talk' */}
+        <section id="bot-talk"> 
           <h2 style={{ textAlign: 'center', fontSize: '2.8em', marginBottom: '50px', color: 'var(--primary-color)' }}>Ask Abhinav's Bot!</h2>
           <Chatbot />
         </section>
+        
         <section id="contact">
           <Contact />
         </section>
